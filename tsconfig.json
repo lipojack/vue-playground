@@ -12,6 +12,12 @@
     }
   ],
   "compilerOptions": {
-    "module": "NodeNext"
-  }
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler", // or "NodeNext"
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true, // <-- important for .ts extension in imports
+    "strict": true,
+    "skipLibCheck": true  }
 }
