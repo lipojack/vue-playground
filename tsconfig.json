@@ -17,6 +17,7 @@
     "moduleResolution": "Bundler", // or "NodeNext"
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "noEmit": true,
     "allowImportingTsExtensions": true, // <-- important for .ts extension in imports
     "strict": true,
     "skipLibCheck": true  }
