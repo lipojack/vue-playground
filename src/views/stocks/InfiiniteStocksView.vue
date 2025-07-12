@@ -1,5 +1,5 @@
 <template>
-  <data-list :items="items" :isLoading="isLoading" :hasMore="hasMore"/>
+  <data-list :items="items" :isLoading="isLoading" :hasMore="hasMore" @select="$emit('item-click', $event)"/>
   <div ref="sentinel" class="h-8"></div>
 </template>
 
@@ -8,6 +8,7 @@
 
 import { ref, onMounted } from 'vue'
 import { useInfiniteStocks } from '@/composables/useInfiniteStocks'
+// import { StockDetail } from '@/types/stocks'
 import DataList from '@/components/DataList.vue'
 
 const {
@@ -30,4 +31,7 @@ onMounted(() => {
 })
 
 
+defineEmits<{
+  (e: 'item-click', id: number): void
+}>()
 </script>

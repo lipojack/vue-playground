@@ -5,7 +5,7 @@
       :key="item.id"
       class="bg-white p-4 rounded shadow"
     >
-      <p class="text-lg font-semibold">{{ item.name }}</p>
+      <p class="text-lg font-semibold" @click="$emit('select', item.id)">{{ item.name }}</p>
       <p class="text-sm text-gray-500">{{ item.symbol }}</p>
     </div>
 
@@ -17,9 +17,13 @@
 
 <script setup lang="ts">
 
-const props = defineProps<{
+defineProps<{
   items: Array<{ id: number; name: string; symbol: string }>;
   isLoading: boolean;
   hasMore: boolean;
 }>();
+
+defineEmits<{
+  (e: 'select', id: number): void
+}>()
 </script>
