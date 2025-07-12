@@ -5,11 +5,10 @@
 
 
 <script setup lang="ts">
-import DataList from './DataList.vue'
 
 import { ref, onMounted } from 'vue'
-
 import { useInfiniteStocks } from '@/composables/useInfiniteStocks'
+import DataList from '@/components/DataList.vue'
 
 const {
   items,

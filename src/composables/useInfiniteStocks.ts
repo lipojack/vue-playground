@@ -15,7 +15,6 @@ export const useInfiniteStocks = () => {
 
     try {
       const data = await fetchStocks(page.value, 20)
-      // const data: Stock[] = await res.json()
 
       if (data.length === 0) {
         hasMore.value = false

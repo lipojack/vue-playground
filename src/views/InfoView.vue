@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import InfoTable from '@/components/InfoTable.vue';
+import InfiniteStocksView from '@/views/stocks/InfiiniteStocksView.vue';
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import InfoTable from '@/components/InfoTable.vue';
 
     <div class="wrapper">
 
-      <InfoTable />
+      <infinite-stocks-view />
     </div>
   </header>
 
